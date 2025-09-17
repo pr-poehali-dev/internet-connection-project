@@ -5,7 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import Icon from '@/components/ui/icon';
-import InteractiveMap from '@/components/InteractiveMap';
+
 
 const Index = () => {
   const [address, setAddress] = useState('');
@@ -246,8 +246,21 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="max-w-6xl mx-auto">
-            <InteractiveMap />
+          <div className="max-w-4xl mx-auto">
+            <Card className="overflow-hidden">
+              <CardContent className="p-0">
+                <div className="relative bg-gradient-to-br from-blue-50 to-green-50 h-96 flex items-center justify-center">
+                  <div className="text-center">
+                    <Icon name="Map" size={64} className="text-primary mx-auto mb-4" />
+                    <h3 className="text-2xl font-semibold mb-2">Карта покрытия</h3>
+                    <p className="text-muted-foreground mb-4">
+                      Проверка покрытия доступна по телефону +7 (495) 123-45-67
+                    </p>
+                    <Button>Узнать о покрытии</Button>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
