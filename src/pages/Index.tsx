@@ -101,7 +101,7 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
+      <section className="py-20 bg-gradient-to-br from-primary/10 via-accent/5 to-secondary/10">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
@@ -179,7 +179,7 @@ const Index = () => {
                   <ul className="space-y-2">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm">
-                        <Icon name="Check" size={16} className="text-green-500 mr-2 flex-shrink-0" />
+                        <Icon name="Check" size={16} className="text-primary mr-2 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
@@ -221,7 +221,7 @@ const Index = () => {
                   <ul className="space-y-3 mb-6">
                     {tariff.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm">
-                        <Icon name="Check" size={16} className="text-green-500 mr-3 flex-shrink-0" />
+                        <Icon name="Check" size={16} className="text-primary mr-3 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
@@ -249,7 +249,7 @@ const Index = () => {
           <div className="max-w-4xl mx-auto">
             <Card className="overflow-hidden">
               <CardContent className="p-0">
-                <div className="relative bg-gradient-to-br from-blue-50 to-green-50 h-96 flex items-center justify-center">
+                <div className="relative bg-gradient-to-br from-accent/20 to-primary/10 h-96 flex items-center justify-center">
                   <div className="text-center">
                     <Icon name="Map" size={64} className="text-primary mx-auto mb-4" />
                     <h3 className="text-2xl font-semibold mb-2">Карта покрытия</h3>
