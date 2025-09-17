@@ -254,7 +254,8 @@ const Index = () => {
                     <Icon name="Map" size={64} className="text-primary mx-auto mb-4" />
                     <h3 className="text-2xl font-semibold mb-2">Карта покрытия</h3>
                     <p className="text-muted-foreground mb-4">
-                      Проверка покрытия доступна по телефону +7 (495) 123-45-67
+                      Проверка покрытия по телефонам:<br />
+                      +7 (901) 500-00-78 • +7 (901) 500-00-87
                     </p>
                     <Button>Узнать о покрытии</Button>
                   </div>
@@ -312,7 +313,10 @@ const Index = () => {
                 <CardTitle className="text-lg">Телефон</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">+7 (495) 123-45-67</p>
+                <div className="space-y-1">
+                  <p className="text-muted-foreground">+7 (901) 500-00-78</p>
+                  <p className="text-muted-foreground">+7 (901) 500-00-87</p>
+                </div>
               </CardContent>
             </Card>
             
