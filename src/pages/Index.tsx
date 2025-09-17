@@ -59,21 +59,24 @@ const Index = () => {
 
   const tariffs = [
     {
-      name: 'Базовый',
+      name: 'Старт',
       speed: '100 Мбит/с',
-      price: '990',
+      price: '1490',
+      description: 'Оптимальный вариант для серфинга, мессенджеров, социальных сетей и просмотра видео в HD.',
       features: ['Безлимитный трафик', 'Wi-Fi роутер в аренду', 'Техподдержка']
     },
     {
-      name: 'Оптимальный',
-      speed: '300 Мбит/с',
-      price: '1490',
+      name: 'Продвинутый',
+      speed: '150 Мбит/с',
+      price: '1990',
+      description: 'Для активного использования интернета: потоковое видео в Full HD, онлайн-игры, работа из дома.',
       features: ['Безлимитный трафик', 'Wi-Fi роутер в подарок', 'Приоритетная поддержка', 'Статический IP']
     },
     {
-      name: 'Максимальный',
-      speed: '1000 Мбит/с',
-      price: '2490',
+      name: 'Премиум',
+      speed: '240 Мбит/с',
+      price: '2590',
+      description: 'Высокая скорость для больших потоков данных: 4K видео, видеоконференции, стриминг, умный дом и все устройства одновременно.',
       features: ['Безлимитный трафик', 'Профессиональное оборудование', 'VIP поддержка', 'Статический IP', 'Резервный канал']
     }
   ];
@@ -111,31 +114,7 @@ const Index = () => {
               Подключение к сети интернет для частных лиц и бизнеса через беспроводные каналы связи, включая спутниковый интернет
             </p>
             
-            {/* Coverage Check */}
-            <div className="max-w-md mx-auto mb-8">
-              <div className="flex gap-3">
-                <Input
-                  placeholder="Введите ваш адрес"
-                  value={address}
-                  onChange={(e) => setAddress(e.target.value)}
-                  className="flex-1"
-                />
-                <Button 
-                  onClick={handleCoverageCheck}
-                  disabled={checkingCoverage || !address}
-                  className="px-6"
-                >
-                  {checkingCoverage ? (
-                    <Icon name="Loader2" size={16} className="animate-spin" />
-                  ) : (
-                    <Icon name="Search" size={16} />
-                  )}
-                </Button>
-              </div>
-              <p className="text-sm text-muted-foreground mt-2">
-                Проверьте возможность подключения по вашему адресу
-              </p>
-            </div>
+
 
             <div className="flex flex-wrap justify-center gap-4">
               <Badge variant="secondary" className="px-4 py-2 bg-success/10 text-success border-success/20">
@@ -195,7 +174,7 @@ const Index = () => {
       <section id="tariffs" className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Тарифные планы</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Тарифные планы интернет-подключения</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Выберите оптимальный тариф для ваших потребностей
             </p>
@@ -212,10 +191,16 @@ const Index = () => {
                 <CardHeader className="text-center">
                   <CardTitle className="text-2xl">{tariff.name}</CardTitle>
                   <div className="py-4">
-                    <div className="text-4xl font-bold text-success">{tariff.price}</div>
+                    <div className="text-4xl font-bold text-primary">{tariff.price}</div>
                     <div className="text-sm text-muted-foreground">₽/месяц</div>
                   </div>
-                  <div className="text-lg font-semibold text-secondary">{tariff.speed}</div>
+                  <div className="flex items-center justify-center mb-4">
+                    <Icon name={tariff.name === 'Премиум' ? 'Zap' : 'Wifi'} size={24} className="text-success mr-2" />
+                    <span className="font-semibold">до {tariff.speed}</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    {tariff.description}
+                  </p>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3 mb-6">
