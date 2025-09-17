@@ -98,7 +98,6 @@ const Index = () => {
               <a href="#about" className="text-sm font-medium hover:text-success transition-colors">О компании</a>
               <a href="#contacts" className="text-sm font-medium hover:text-success transition-colors">Контакты</a>
             </nav>
-            <Button>Подключиться</Button>
           </div>
         </div>
       </header>
@@ -271,7 +270,8 @@ const Index = () => {
                   'Домодедово', 'Сергиев Посад', 'Коломна', 'Пушкино', 'Зеленоград', 'Щёлково',
                   'Видное', 'Дубна', 'Истра', 'Орехово-Зуево', 'Клин', 'Фрязино',
                   'Лобня', 'Ногинск', 'Реутов', 'Красноармейск', 'Дмитров', 'Серпухов',
-                  'Егорьевск', 'Лыткарино', 'Солнечногорск', 'Жуковский', 'Старая Купавна'
+                  'Егорьевск', 'Лыткарино', 'Солнечногорск', 'Жуковский', 'Старая Купавна',
+                  'Бронницы', 'Чехов', 'Кашира'
                 ].map((city) => (
                   <div key={city} className="bg-accent/30 rounded-lg p-3 border">
                     <div className="flex items-center justify-center">
@@ -395,7 +395,7 @@ const Index = () => {
                 <CardTitle className="text-lg">Email</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">info@netconnect.ru</p>
+                <p className="text-muted-foreground">info@mosoblconnect.ru</p>
               </CardContent>
             </Card>
             
@@ -405,7 +405,7 @@ const Index = () => {
                 <CardTitle className="text-lg">Адрес</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">г. Москва, ул. Тверская, 1</p>
+                <p className="text-muted-foreground">Москва, Партийный пер., дом 1</p>
               </CardContent>
             </Card>
             
@@ -431,7 +431,7 @@ const Index = () => {
               <span className="text-lg font-semibold">NetConnect</span>
             </div>
             <p className="text-muted-foreground text-sm">
-              © 2024 NetConnect. Все права защищены.
+              © 2015 NetConnect. Все права защищены.
             </p>
           </div>
         </div>
