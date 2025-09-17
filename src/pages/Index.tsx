@@ -89,11 +89,11 @@ const Index = () => {
               <span className="text-2xl font-bold text-primary">NetConnect</span>
             </div>
             <nav className="hidden md:flex items-center space-x-8">
-              <a href="#services" className="text-sm font-medium hover:text-primary transition-colors">Услуги</a>
-              <a href="#tariffs" className="text-sm font-medium hover:text-primary transition-colors">Тарифы</a>
-              <a href="#coverage" className="text-sm font-medium hover:text-primary transition-colors">Покрытие</a>
-              <a href="#about" className="text-sm font-medium hover:text-primary transition-colors">О компании</a>
-              <a href="#contacts" className="text-sm font-medium hover:text-primary transition-colors">Контакты</a>
+              <a href="#services" className="text-sm font-medium hover:text-success transition-colors">Услуги</a>
+              <a href="#tariffs" className="text-sm font-medium hover:text-success transition-colors">Тарифы</a>
+              <a href="#coverage" className="text-sm font-medium hover:text-success transition-colors">Покрытие</a>
+              <a href="#about" className="text-sm font-medium hover:text-success transition-colors">О компании</a>
+              <a href="#contacts" className="text-sm font-medium hover:text-success transition-colors">Контакты</a>
             </nav>
             <Button>Подключиться</Button>
           </div>
@@ -138,15 +138,15 @@ const Index = () => {
             </div>
 
             <div className="flex flex-wrap justify-center gap-4">
-              <Badge variant="secondary" className="px-4 py-2">
+              <Badge variant="secondary" className="px-4 py-2 bg-success/10 text-success border-success/20">
                 <Icon name="Zap" size={16} className="mr-2" />
                 До 1 Гбит/с
               </Badge>
-              <Badge variant="secondary" className="px-4 py-2">
+              <Badge variant="secondary" className="px-4 py-2 bg-success/10 text-success border-success/20">
                 <Icon name="Shield" size={16} className="mr-2" />
                 99% надежность
               </Badge>
-              <Badge variant="secondary" className="px-4 py-2">
+              <Badge variant="secondary" className="px-4 py-2 bg-success/10 text-success border-success/20">
                 <Icon name="Clock" size={16} className="mr-2" />
                 24/7 поддержка
               </Badge>
@@ -170,7 +170,7 @@ const Index = () => {
               <Card key={index} className="hover:shadow-lg transition-all duration-300 animate-scale-in">
                 <CardHeader>
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                    <Icon name={service.icon} size={24} className="text-primary" />
+                    <Icon name={service.icon} size={24} className="text-success" />
                   </div>
                   <CardTitle className="text-xl">{service.title}</CardTitle>
                   <CardDescription>{service.description}</CardDescription>
@@ -179,7 +179,7 @@ const Index = () => {
                   <ul className="space-y-2">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm">
-                        <Icon name="Check" size={16} className="text-primary mr-2 flex-shrink-0" />
+                        <Icon name="Check" size={16} className="text-success mr-2 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
@@ -212,7 +212,7 @@ const Index = () => {
                 <CardHeader className="text-center">
                   <CardTitle className="text-2xl">{tariff.name}</CardTitle>
                   <div className="py-4">
-                    <div className="text-4xl font-bold text-primary">{tariff.price}</div>
+                    <div className="text-4xl font-bold text-success">{tariff.price}</div>
                     <div className="text-sm text-muted-foreground">₽/месяц</div>
                   </div>
                   <div className="text-lg font-semibold text-secondary">{tariff.speed}</div>
@@ -221,7 +221,7 @@ const Index = () => {
                   <ul className="space-y-3 mb-6">
                     {tariff.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm">
-                        <Icon name="Check" size={16} className="text-primary mr-3 flex-shrink-0" />
+                        <Icon name="Check" size={16} className="text-success mr-3 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
@@ -280,15 +280,15 @@ const Index = () => {
             
             <div className="grid md:grid-cols-3 gap-8 mt-12">
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary mb-2">5+</div>
+                <div className="text-3xl font-bold text-success mb-2">5+</div>
                 <div className="text-muted-foreground">лет на рынке</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary mb-2">10000+</div>
+                <div className="text-3xl font-bold text-success mb-2">10000+</div>
                 <div className="text-muted-foreground">довольных клиентов</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary mb-2">99%</div>
+                <div className="text-3xl font-bold text-success mb-2">99%</div>
                 <div className="text-muted-foreground">время безотказной работы</div>
               </div>
             </div>
