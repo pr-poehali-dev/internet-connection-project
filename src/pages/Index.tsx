@@ -22,8 +22,8 @@ const Index = () => {
     {
       icon: 'Wifi',
       title: 'Интернет-подключение',
-      description: 'Высокоскоростной интернет до 1 Гбит/с через беспроводные технологии',
-      features: ['До 1000 Мбит/с', 'Стабильное соединение', '24/7 поддержка']
+      description: 'Беспроводной интернет до 250 Мбит/с через беспроводные технологии',
+      features: ['До 250 Мбит/с', 'Стабильное соединение', '24/7 поддержка']
     },
     {
       icon: 'Satellite',
@@ -94,6 +94,7 @@ const Index = () => {
             <nav className="hidden md:flex items-center space-x-8">
               <a href="#services" className="text-sm font-medium hover:text-success transition-colors">Услуги</a>
               <a href="#tariffs" className="text-sm font-medium hover:text-success transition-colors">Тарифы</a>
+              <a href="#pricing" className="text-sm font-medium hover:text-success transition-colors">Стоимость</a>
               <a href="#coverage" className="text-sm font-medium hover:text-success transition-colors">Покрытие</a>
               <a href="#about" className="text-sm font-medium hover:text-success transition-colors">О компании</a>
               <a href="#contacts" className="text-sm font-medium hover:text-success transition-colors">Контакты</a>
@@ -107,7 +108,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              Высокоскоростной интернет в Московской области
+              Беспроводной интернет в Московской области
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               Подключение к сети интернет для частных лиц и бизнеса через беспроводные каналы связи, включая спутниковый интернет
@@ -118,7 +119,7 @@ const Index = () => {
             <div className="flex flex-wrap justify-center gap-4">
               <Badge variant="secondary" className="px-4 py-2 bg-success/10 text-success border-success/20">
                 <Icon name="Zap" size={16} className="mr-2" />
-                До 1 Гбит/с
+                До 250 Мбит/с
               </Badge>
               <Badge variant="secondary" className="px-4 py-2 bg-success/10 text-success border-success/20">
                 <Icon name="Shield" size={16} className="mr-2" />
@@ -327,8 +328,87 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Pricing Section */}
+      <section id="pricing" className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Стоимость подключения</h2>
+              <p className="text-xl text-muted-foreground">
+                Профессиональные решения для надежного интернета
+              </p>
+            </div>
+            
+            <div className="bg-card border rounded-lg p-8">
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <div className="flex items-center mb-6">
+                    <Icon name="Package" size={32} className="text-primary mr-4" />
+                    <h3 className="text-2xl font-bold">В пакет оборудования входит:</h3>
+                  </div>
+                  
+                  <div className="space-y-4">
+                    <div className="flex items-start">
+                      <Icon name="Wifi" size={20} className="text-success mr-3 mt-1 flex-shrink-0" />
+                      <div>
+                        <h4 className="font-semibold mb-1">Wi-Fi роутер нового поколения с:</h4>
+                        <ul className="text-muted-foreground space-y-2 ml-4">
+                          <li>• системой расширенной безопасности пользователя (защита от внешних угроз и несанкционированного доступа)</li>
+                          <li>• возможностью подключения дополнительных опций (например, усилителей сигнала, IPTV, резервных каналов связи)</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div>
+                  <div className="flex items-center mb-6">
+                    <Icon name="Banknote" size={32} className="text-success mr-4" />
+                    <h3 className="text-2xl font-bold">От 16 800 рублей</h3>
+                  </div>
+                  
+                  <div className="bg-success/10 border border-success/20 rounded-lg p-6 mb-6">
+                    <h4 className="font-semibold text-success mb-3">Стоимость минимального пакета подключения начинается от 16 800 рублей.</h4>
+                  </div>
+                  
+                  <div className="space-y-4">
+                    <h4 className="font-semibold mb-3">Мы гарантируем:</h4>
+                    <div className="space-y-3">
+                      <div className="flex items-center">
+                        <Icon name="CheckCircle" size={16} className="text-success mr-3" />
+                        <span>профессиональную установку и настройку</span>
+                      </div>
+                      <div className="flex items-center">
+                        <Icon name="CheckCircle" size={16} className="text-success mr-3" />
+                        <span>подбор оптимального тарифа под ваши нужды</span>
+                      </div>
+                      <div className="flex items-center">
+                        <Icon name="CheckCircle" size={16} className="text-success mr-3" />
+                        <span>консультационную и техническую поддержку после подключения</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="border-t pt-6 mt-8">
+                <div className="bg-primary/10 border border-primary/20 rounded-lg p-6">
+                  <div className="flex items-start">
+                    <Icon name="Phone" size={24} className="text-primary mr-4 flex-shrink-0 mt-1" />
+                    <div>
+                      <h4 className="font-semibold mb-2">Свяжитесь с нами, и мы подготовим для вас персональное решение по организации интернета на вашем объекте.</h4>
+                      <p className="text-muted-foreground">Наши специалисты проведут бесплатную консультацию и предложат оптимальный вариант подключения.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* About Section */}
-      <section id="about" className="py-20 bg-muted/30">
+      <section id="about" className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-8">О компании NetConnect</h2>
